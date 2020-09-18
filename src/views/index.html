@@ -3,14 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--Bootstrap 4-->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <!--Font Awesome-->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <title><%= title %></title>
+    <title>
+        <%= title %>
+    </title>
+    <!--Aquí se añaden la parte de los links-->
+    <%- include('partials/head.html'); -%>
 </head>
 <body>
     <!--Aquí ha cambiado la sintaxis (se le agrega "- -" y solo es para este include)-->
     <%- include('partials/navigation.html'); -%>
+    
+    <!--Imágen-->
+    <div class="container">
+        <header class="row">
+            <div class="col-lg text-center align-center">
+                <img src="img/pews-logo.png" alt="Logo" class="animate__animated animate__zoomIn">
+            </div>
+        </header>
+    </div>
+
+    <!--Sección 1-->
+    <div class="container-fluid" id="about">
+        <div class="row bg-dark text-white p-5 text-center">
+            <div class="col-sm-6">
+                <i class="fab fa-youtube fa-10x"></i>
+            </div>
+            <div class="col-sm-6">
+                <h3>One of my favoirites youtubers</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem quaerat magni ex sed pariatur possimus maxime cupiditate facilis! Minima, dolore eligendi cupiditate cum dicta quam illum itaque officia eveniet beatae.</p>
+            </div>
+        </div>
+    </div>
+
+    <!--Footer-->
+    <%- include('partials/footer.html'); -%>
 </body>
 </html>

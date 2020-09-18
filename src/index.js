@@ -19,7 +19,7 @@ el archivo index.html)*/
     app.use(require('./routes/index'));
 
 // static files
-
+app.use(express.static(path.join(__dirname, 'public')));
 
 // listenning the server (Aquí se configura el puerto en donde nuestra aplicación va  a estar trabajando)
 app.listen(app.get('port'), () => {
